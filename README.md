@@ -32,16 +32,21 @@ Source: https://askubuntu.com/questions/355565/how-do-i-install-the-latest-versi
 
 ### Add remote host:
 1. Go to Settings / Preferences | Build, Execution, Deployment | Toolchains and click **plus icon** to create a new toolchain
+
 2. Select Remote Host from the drop-down menu and click icons actions menu in the Credentials field. In the dialog that opens, provide the credentials for accessing you remote machine:
 <img src="https://www.jetbrains.com/help/img/idea/2019.2/cl_remote_toolchaincredentials.png" width="500"/>
+
 3. After establishing the connection, CLion attempts to detect the tools in default remote locations /usr/bin/cmake and /usr/bin/gdb (or using the full paths, if you have provided manually). When the checks finish successfully, the toolchain is ready for use:
 <img src="https://www.jetbrains.com/help/img/idea/2019.2/cl_remote_toolchainsuccess.png" width="500"/>
-4(optional). You can make the newly created toolchain the default one (for this, move it to the top of the toolchains list by clicking move upmove down). When set as default, the remote toolchain is used for all the projects you create and open in CLion.
+
+4.(optional) You can make the newly created toolchain the default one (for this, move it to the top of the toolchains list by clicking move upmove down). When set as default, the remote toolchain is used for all the projects you create and open in CLion.
+
 5. Go to Settings / Preferences | Build, Execution, Deployment | CMake, click **plus icon** to create a new CMake profile, and connect it to your remote toolchain using the Toolchain field:
 <img src="https://www.jetbrains.com/help/img/idea/2019.2/cl_remote_cmakeprofile.png" width="500"/>
-6. Check and adjust the deployment configuration (i.e remote host window)
-7. Once you've done you will be able to choose local/remote here:
 
+6. Check and adjust the deployment configuration (i.e remote host window)
+
+7. Once you've done you will be able to choose local/remote here:
 <img src="https://picua.org/images/2019/10/09/d669d34e3f62bdb7d4e82f9672e07821.png" width="500"/>
 
 
