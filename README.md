@@ -30,7 +30,7 @@ C++ Compiler: ```/usr/bin/c++```
 
 Source: https://askubuntu.com/questions/355565/how-do-i-install-the-latest-version-of-cmake-from-the-command-line
 
-### Add remote host:
+### Add remote host in CLion:
 1. Go to Settings / Preferences | Build, Execution, Deployment | Toolchains and click **plus icon** to create a new toolchain
 
 2. Select Remote Host from the drop-down menu and click icons actions menu in the Credentials field. In the dialog that opens, provide the credentials for accessing you remote machine:
@@ -51,6 +51,7 @@ Source: https://askubuntu.com/questions/355565/how-do-i-install-the-latest-versi
 
 
 Source: https://www.jetbrains.com/help/clion/remote-projects-support.html
+
 Source (video): https://youtu.be/g1zPcja3zAU?t=658
 
 ### Check if all is working:
