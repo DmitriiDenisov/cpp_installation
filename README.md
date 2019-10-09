@@ -41,7 +41,7 @@ Source: https://askubuntu.com/questions/355565/how-do-i-install-the-latest-versi
 ![alt text](https://www.jetbrains.com/help/img/idea/2019.2/cl_remote_cmakeprofile.png)
 6. Check and adjust the deployment configuration (i.e remote host window)
 7. Once you've done you will be able to choose local/remote here:
-![alt text](https://drop3.dropmefiles.com/preview/a0H2O/453204774)
+![alt text](https://i.ibb.co/kJXzKhM/Screen-Shot-2019-10-10-at-00-08-43.png)
 
 Source: https://www.jetbrains.com/help/clion/remote-projects-support.html
 Source (video): https://youtu.be/g1zPcja3zAU?t=658
