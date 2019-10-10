@@ -9,6 +9,9 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <iostream>
+
+
 
 // Returns hostname for the local computer 
 void checkHostName(int hostname)
@@ -63,7 +66,9 @@ int main()
             host_entry->h_addr_list[0]));
 
     printf("Hostname: %s\n", hostbuffer);
-    printf("Host IP: %s", IPbuffer);
+    printf("Host IP: %s \n", IPbuffer);
+    printf("HEllO \n");
+    printf("test \n");
 
     return 0;
 } 
