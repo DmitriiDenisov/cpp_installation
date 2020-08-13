@@ -82,3 +82,5 @@ Source: https://github.com/ipkn/crow/wiki/Installation
 4. `sudo g++ crw_server.cpp -lboost_system -pthread` or if it does not run then `g++ -O3 -std=c++11 server.cpp -lboost_thread -lboost_system -pthread`
 5. `./a.out`
 6. `curl -X GET http://localhost:18080/hi`
+
+### (Ubuntu) Run Docker service with C++
