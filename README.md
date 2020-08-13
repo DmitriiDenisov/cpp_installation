@@ -69,7 +69,7 @@ Host IP: 10.128.0.2
 4. `gcc --version`
 5. `mkdir cpp_ex`
 6. `cd cpp_ex`
-7. `vim hello.cpp`
+7. `vim hello.cpp` (take `hello.cpp` from this repo)
 8. `sudo g++ hello.cpp`
 9. `./a.out`
 
