@@ -77,7 +77,7 @@ Host IP: 10.128.0.2
 Source: https://github.com/ipkn/crow
 Source: https://github.com/ipkn/crow/wiki/Installation
 1. Download and include file: https://github.com/ipkn/crow/releases/download/v0.1/crow_all.h
-2. If you try to run `sudo g++ hello.cpp` you will see "fatal error: boost/optional.hpp: No such file or directory" => need to install dependecies
+2. If you try to run `sudo g++ hello_crow.cpp` (take it from this repo) you will see "fatal error: boost/optional.hpp: No such file or directory" => need to install dependecies
 3. `sudo apt install libboost-all-dev libssl-dev`
 4. `g++ -O3 -std=c++11 server.cpp -lboost_thread -lboost_system -pthread`
 or `sudo g++ crw_server.cpp -lboost_system -pthread`
