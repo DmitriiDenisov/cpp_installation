@@ -1,14 +1,13 @@
-#include "crow_all.h"
-#include<iostream>
-
-using namespace std;
+#include "crow.h"
 
 int main()
-
 {
+    crow::SimpleApp app;
 
-            cout<<"\n\nHello World,\nWelcome to my first C ++ program on Ubuntu Linux\n\n"<<endl;
+    CROW_ROUTE(app, "/hi")
+    ([]() {
+        return "Hello world!";
+    });
 
-            return 0;
-
+    app.port(18080).run();
 }
