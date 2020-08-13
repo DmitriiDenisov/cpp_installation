@@ -61,3 +61,23 @@ file ```main.cpp``` prints out host name and local IP, example of print:
 Hostname: instance-3
 Host IP: 10.128.0.2
 ```
+
+### Install c++ environment in Ubuntu 
+1. `sudo apt update`
+2. `sudo apt install build-essential`
+3. `sudo apt-get install manpages-dev`
+4. `gcc --version`
+5. `mkdir cpp_ex`
+6. `cd cpp_ex`
+7. `vim hello.cpp`
+8. `sudo g++ hello.cpp`
+9. `./a.out`
+
+### Install Crow library (flask analog)
+Source: https://github.com/ipkn/crow
+Source: https://github.com/ipkn/crow/wiki/Installation
+1. Download and include file: https://github.com/ipkn/crow/releases/download/v0.1/crow_all.h
+2. If you try to run `sudo g++ hello.cpp` you will see "fatal error: boost/optional.hpp: No such file or directory" => need to install dependecies
+3. `sudo apt install libboost-all-dev libssl-dev`
+4. `g++ -O3 -std=c++11 server.cpp -lboost_thread -lboost_system -pthread`
+or `sudo g++ crw_server.cpp -lboost_system -pthread`
