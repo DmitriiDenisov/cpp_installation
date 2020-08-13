@@ -1,9 +1,9 @@
-# CLion
+# C++ installation
 
-### Install cmake (local machine):
+### (MaxOS) Install cmake (local machine):
 Download CLion and cmake will be installed simultaneously with CLion
 
-### Install cmake (on remote machine):
+### (Ubuntu) Install cmake
 1. Uninstall the default version provided by Ubuntu's package manager and configuration by using:
 ```sudo apt remove --purge --auto-remove cmake```
 2. Go to the official CMake webpage (http://www.cmake.org/download), then download and extract the latest version. Update the version and build variables in the following command to get the desired version:
@@ -54,7 +54,7 @@ Source: https://www.jetbrains.com/help/clion/remote-projects-support.html
 
 Source (video): https://youtu.be/g1zPcja3zAU?t=658
 
-### Check if all is working:
+### Check if CLion is working with remote host:
 
 file ```main.cpp``` prints out host name and local IP, example of print:
 ```
@@ -62,7 +62,7 @@ Hostname: instance-3
 Host IP: 10.128.0.2
 ```
 
-### Install c++ environment in Ubuntu 
+### (Ubuntu) Install C++ environment
 1. `sudo apt update`
 2. `sudo apt install build-essential`
 3. `sudo apt-get install manpages-dev`
@@ -73,7 +73,7 @@ Host IP: 10.128.0.2
 8. `sudo g++ hello.cpp`
 9. `./a.out`
 
-### Install Crow library (flask analog)
+### (Ubuntu) Install Crow library (flask analog)
 Source: https://github.com/ipkn/crow
 Source: https://github.com/ipkn/crow/wiki/Installation
 1. Download and include file: https://github.com/ipkn/crow/releases/download/v0.1/crow_all.h
