@@ -69,15 +69,15 @@ Host IP: 10.128.0.2
 4. `gcc --version`
 5. `mkdir cpp_ex`
 6. `cd cpp_ex`
-7. `vim hello.cpp` (take `hello.cpp` from this repo)
+7. `vim hello.cpp` (take `base_ex/hello.cpp` from this repo)
 8. `sudo g++ hello.cpp`
 9. `./a.out`
 
 ### (Ubuntu) Install Crow library (flask analog)
 Source: https://github.com/ipkn/crow
 Source: https://github.com/ipkn/crow/wiki/Installation
-1. Download and include file: https://github.com/ipkn/crow/releases/download/v0.1/crow_all.h
-2. If you try to run `sudo g++ hello_crow.cpp` (take it from this repo) you will see "fatal error: boost/optional.hpp: No such file or directory" => need to install dependecies
+1. Download and include file: https://github.com/ipkn/crow/releases/download/v0.1/crow_all.h (or take it from this repo `crow.h`)
+2. If you try to run `sudo g++ hello_crow.cpp` (take it from this repo `base_ex/hello_crow.cpp`) you will see "fatal error: boost/optional.hpp: No such file or directory" => need to install dependecies
 3. `sudo apt install libboost-all-dev libssl-dev`
 4. `sudo g++ crw_server.cpp -lboost_system -pthread` or if it does not run then `g++ -O3 -std=c++11 server.cpp -lboost_thread -lboost_system -pthread`
 5. `./a.out`
@@ -87,4 +87,12 @@ Source: https://medium.com/@raghavrastogi594/get-set-go-with-crow-a-micro-web-fr
 
 ### (Ubuntu) Run Docker service with C++
 
+1. Clone this repo and go to `helloworld_docker` folder
+2. `sudo docker build --rm -f Dockerfile -t dockerhello:latest .`
+3. `sudo docker run --rm -it dockerhello:latest`
+
 ### (Ubuntu) Docker + Crow (flask analog)
+
+1. Clone this repo and go to `crow_docker` fodler
+2. `sudo docker build --rm -f Dockerfile -t dockerhello:latest .`
+3. `sudo docker run --rm -it dockerhello:latest`
