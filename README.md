@@ -93,8 +93,11 @@ Install Docker: https://docs.docker.com/engine/install/ubuntu/
 2. `sudo docker build --rm -f Dockerfile -t dockerhello:latest .`
 3. `sudo docker run --rm -it dockerhello:latest`
 
+Source: https://devblogs.microsoft.com/cppblog/c-development-with-docker-containers-in-visual-studio-code/
+
 ### (Ubuntu) Docker + Crow (flask analog)
 
 1. Clone this repo and go to `crow_docker` fodler
-2. `sudo docker build --rm -f Dockerfile -t dockerhello:latest .`
-3. `sudo docker run --rm -it dockerhello:latest`
+2. `sudo docker build --rm -f Dockerfile -t crowdocker:latest .`
+3. `sudo docker run -p 300:18080 --rm -it crowdocker:latest` (match port 300 to 18080)
+4. `curl -X GET http://localhost:300/hi`
