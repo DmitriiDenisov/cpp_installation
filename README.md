@@ -87,6 +87,8 @@ Source: https://medium.com/@raghavrastogi594/get-set-go-with-crow-a-micro-web-fr
 
 ### (Ubuntu) Run Docker service with C++
 
+Install Docker: https://docs.docker.com/engine/install/ubuntu/
+
 1. Clone this repo and go to `helloworld_docker` folder
 2. `sudo docker build --rm -f Dockerfile -t dockerhello:latest .`
 3. `sudo docker run --rm -it dockerhello:latest`
