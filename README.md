@@ -85,12 +85,13 @@ Source: https://github.com/ipkn/crow/wiki/Installation
 
 Source: https://medium.com/@raghavrastogi594/get-set-go-with-crow-a-micro-web-framework-for-web-in-c-570f99091983
 
-### (Ubuntu) Advance Crow Library
-1. Create file `crw_server.cpp` (take it from this repo)
+### (Ubuntu) Advanced Crow Library
+In order to do more advanced example and pass some parameters inside (list/double/int/string) and to return full json:
+1. `cd advanced_crow` (take it from this repo)
 2. `sudo g++ crw_server.cpp -lboost_system -pthread`
 3. `./a.out`
-4. `curl -X GET "http://localhost:18080/ex_json?foo='blabla'&pew=32&count[]=a&count[]=b&double_param=2.31"`
-5. `curl -X GET "http://localhost:18080/ex_json_arr"`
+4. Example to pass inside string/int/double/list parameters: `curl -X GET "http://localhost:18080/ex_json?foo='blabla'&pew=32&count[]=a&count[]=b&double_param=2.31"`
+5. Just another example: `curl -X GET "http://localhost:18080/ex_json_arr"`
 
 ### (Ubuntu) Run Docker service with C++
 
