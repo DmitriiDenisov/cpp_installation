@@ -1,6 +1,6 @@
 # C++ installation
 
-### (MaxOS) Install cmake (local machine):
+### (MacOS) Install cmake (local machine):
 Download CLion and cmake will be installed simultaneously with CLion
 
 ### (Ubuntu) Install cmake
