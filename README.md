@@ -93,6 +93,8 @@ In order to do more advanced example and pass some parameters inside (list/doubl
 4. Example to pass inside string/int/double/list parameters: `curl -X GET "http://localhost:18080/ex_json?foo='blabla'&pew=32&count[]=a&count[]=b&double_param=2.31"`
 5. Just another example: `curl -X GET "http://localhost:18080/ex_json_arr"`
 
+Source and more examples: https://github.com/ART-Robot-Release/arobot/blob/1a9a1ea31ea6ccbc206b0b38737588894611f16c/src/robot_control/core/database/src/crow_server.cpp
+
 ### (Ubuntu) Run Docker service with C++
 
 Install Docker: https://docs.docker.com/engine/install/ubuntu/
