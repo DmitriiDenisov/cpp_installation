@@ -47,15 +47,30 @@ int main()
         crow::json::wvalue x;
         x["success"] = 1;
         x["message"] = "Hello, World!";
-        x["foo"] = req.url_params.get("foo");
-        x["pew_str"] = req.url_params.get("pew");
-        x["double_param"] = atof(req.url_params.get("double_param") )+ 1;
-        // get integer:
-        x["pew_int_stoi"] = 3 + std::stoi(req.url_params.get("pew"));
-        // get double:
-        x["pew_double"] = atof(req.url_params.get("pew")) / 2;
-        x["list_str"] = array_strings;
 
+        // get String
+        if(req.url_params.get("foo") != nullptr){
+            x["foo"] = req.url_params.get("foo");
+        }
+
+        // get Integer
+	    if(req.url_params.get("pew") != nullptr){
+		    x["pew_str"] = req.url_params.get("pew");
+		    // How to transfer explicitly to integer:
+            x["pew_int_stoi"] = 3 + std::stoi(req.url_params.get("pew"));
+	    }
+
+	    // Get Dobule
+	    if(req.url_params.get("double_param") != nullptr){
+            x["double_param"] = atof(req.url_params.get("double_param") )+ 1.2;
+            // How to transfer explicitly to double:
+            x["pew_double"] = atof(req.url_params.get("pew")) / 2;
+        }
+
+        // get array
+        if (c > 0){
+       	    x["list_str"] = array_strings;
+        }
     // Return array
     x["arr1"][0] = 1;
     x["arr1"][1] = 3;
