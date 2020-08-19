@@ -27,50 +27,40 @@ int main()
         //std::cout << req.url_params.get("foo") << "\n\n";
         // std::cout << req.url_params.get("pew") << "\n\n";
 
-        // Get List from parameters
-        auto array_strings = req.url_params.get_list("count");
-
-        // Lenght of array
-        int c = array_strings.size();
-        // Convert array of Str to array of Int
-        //int arrayOfIntegers[c];
-        //for(int i = 0; i < c; i++) arrayOfIntegers[i] = std::stoi(array_strings[i]);
-
-        // You can print all values in Array
-        /*
-        for(const auto& countVal : count) {
-                std::cout << " - " << countVal << '\n';
-        }
-        */
-
         // Return Json
         crow::json::wvalue x;
         x["success"] = 1;
         x["message"] = "Hello, World!";
 
         // get String
-        if(req.url_params.get("foo") != nullptr){
+        if (req.url_params.get("foo") != nullptr){
             x["foo"] = req.url_params.get("foo");
         }
 
-        // get Integer
-	    if(req.url_params.get("pew") != nullptr){
-		    x["pew_str"] = req.url_params.get("pew");
-		    // How to transfer explicitly to integer:
+        // get integer:
+        if (req.url_params.get("pew") != nullptr){
+            x["pew_str"] = req.url_params.get("pew");
             x["pew_int_stoi"] = 3 + std::stoi(req.url_params.get("pew"));
-	    }
-
-	    // Get Dobule
-	    if(req.url_params.get("double_param") != nullptr){
-            x["double_param"] = atof(req.url_params.get("double_param") )+ 1.2;
-            // How to transfer explicitly to double:
+            // cast to double and divide by 2:
             x["pew_double"] = atof(req.url_params.get("pew")) / 2;
         }
 
-        // get array
-        if (c > 0){
-       	    x["list_str"] = array_strings;
-        }
+    // get double
+    if (req.url_params.get("double_param") != nullptr){
+	        x["double_param"] = atof( req.url_params.get("double_param") ) + 1;
+    }
+
+    // Get List from parameters
+    auto array_strings = req.url_params.get_list("count");
+    if (array_strings.size() > 0){
+        // Convert array of Str to array of Int
+        //int arrayOfIntegers[c];
+        //for(int i = 0; i < c; i++) arrayOfIntegers[i] = std::stoi(array_strings[i]);
+        x["list_str"] = array_strings;
+    }
+
+
+
     // Return array
     x["arr1"][0] = 1;
     x["arr1"][1] = 3;
@@ -99,6 +89,6 @@ int main()
     x["name"] = "ABC";
     return crow::response(x);
 });
-
+	
     app.port(18080).run();
 }
